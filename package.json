@@ -1,0 +1,33 @@
+{
+  "name": "commonplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal Discord archivist: indexes your own server and answers with source links.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "migrate": "tsx src/db/migrate.ts",
+    "demo": "tsx src/demo/run.ts",
+    "backup": "tsx src/cli/backup.ts export",
+    "restore": "tsx src/cli/backup.ts restore",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "discord.js": "14.28.1",
+    "dotenv": "18.0.10",
+    "pg": "8.23.1",
+    "tsx": "4.23.15",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/pg": "8.23.1",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  }
+}
